@@ -20,10 +20,23 @@
   font-size: 0.9rem;
 }
 
+.sectionDivider {
+  margin-bottom: 30px;
+  border-left: 4px solid var(--primary);
+  padding-left: 15px;
+}
+
+.categoryHeading {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 .card {
@@ -34,7 +47,7 @@
 }
 
 .imageBox {
-  height: 220px;
+  height: 200px;
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
@@ -43,7 +56,7 @@
 }
 
 .emoji {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .content {
@@ -63,14 +76,14 @@
 }
 
 .projectTitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--text-main);
 }
 
 .description {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 25px;
 }
@@ -78,7 +91,7 @@
 .techStack {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 30px;
 }
 
@@ -86,7 +99,7 @@
   background: var(--bg-secondary);
   padding: 5px 12px;
   border-radius: 8px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -105,8 +118,27 @@
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .categoryHeading {
+    font-size: 1.3rem;
+  }
+
+  .imageBox {
+    height: 160px;
   }
 }

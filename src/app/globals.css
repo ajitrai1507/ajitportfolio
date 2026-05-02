@@ -52,9 +52,15 @@ ul {
 }
 
 section {
-  padding: 120px 20px;
+  padding: 100px 20px;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
 }
 
 .container {
@@ -95,6 +101,13 @@ section {
   padding: 40px;
   box-shadow: var(--shadow);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 25px;
+    border-radius: 20px;
+  }
 }
 
 .glass-card:hover {

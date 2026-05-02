@@ -102,10 +102,28 @@
   font-weight: 900;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .timeline {
+    padding-left: 30px;
+  }
+  
+  .dot {
+    left: -38px;
+    width: 14px;
+    height: 14px;
+  }
+  
   .meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+  
+  .role {
+    font-size: 1.3rem;
   }
 }

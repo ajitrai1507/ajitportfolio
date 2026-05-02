@@ -11,6 +11,14 @@
   padding: 0 40px;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    top: 10px;
+    padding: 0 15px;
+    height: 60px;
+  }
+}
+
 .scrolled {
   top: 0;
   background: rgba(255, 255, 255, 0.8);
@@ -33,6 +41,13 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 5px 20px;
+    border-radius: 15px;
+  }
+}
+
 .scrolled .container {
   background: transparent;
   box-shadow: none;
@@ -42,28 +57,19 @@
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
   color: var(--text-main);
 }
 
-.logoCircle {
-  width: 40px;
-  height: 40px;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-}
-
-.navMenu {
+.desktopMenu {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+@media (max-width: 992px) {
+  .desktopMenu {
+    display: none;
+  }
 }
 
 .links {
@@ -98,8 +104,67 @@
   box-shadow: 0 8px 20px var(--primary-glow);
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
 @media (max-width: 992px) {
-  .links {
-    display: none;
+  .hamburger {
+    display: flex;
   }
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--text-main);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.bar1 { transform: translateY(8px) rotate(45deg); }
+.bar2 { opacity: 0; }
+.bar3 { transform: translateY(-8px) rotate(-45deg); }
+
+/* Mobile Overlay */
+.mobileOverlay {
+  position: fixed;
+  top: 90px;
+  left: 15px;
+  right: 15px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+}
+
+.mobileLinks a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mobileContactBtn {
+  margin-top: 10px;
+  background: var(--primary);
+  color: #fff !important;
+  padding: 12px 40px;
+  border-radius: 15px;
 }

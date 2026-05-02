@@ -97,10 +97,21 @@
 @media (max-width: 992px) {
   .content {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
   .infoGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 25px;
   }
 }
