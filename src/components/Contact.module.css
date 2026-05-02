@@ -1,0 +1,116 @@
+.contact {
+  background-color: var(--background);
+  padding-bottom: 50px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.details a, .details span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.socialCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialTitle {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLink {
+  padding: 12px 30px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.socialLink:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--primary-glow);
+}
+
+.footer {
+  text-align: center;
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

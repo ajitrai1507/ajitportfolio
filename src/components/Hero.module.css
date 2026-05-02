@@ -1,0 +1,157 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #FF4D97;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(255, 77, 151, 0.4);
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--text-main);
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 550px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.actions {
+  margin-bottom: 60px;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 40px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bgBlob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+  opacity: 0.3;
+  z-index: 1;
+  filter: blur(40px);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .imageWrapper {
+    order: 1;
+    margin-bottom: 40px;
+  }
+  
+  .stats {
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+}
