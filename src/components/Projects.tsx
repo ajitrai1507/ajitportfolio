@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from './Projects.module.css';
 
@@ -9,7 +10,7 @@ const frontendProjects = [
     description: 'A global user acquisition marketing platform designed for scalable growth for mobile applications.',
     tech: ['Next.js', 'TypeScript', 'TailwindCSS'],
     link: 'https://www.adsgrind.com/',
-    icon: '📈'
+    image: '/adsgrind.png'
   },
   {
     title: 'AccessNovaa',
@@ -17,7 +18,15 @@ const frontendProjects = [
     description: 'A digital accessibility platform providing tools to ensure inclusive and compliant digital documents.',
     tech: ['Next.js', 'React', 'Accessibility APIs'],
     link: 'https://www.accessnovaa.com/',
-    icon: '🚀'
+    image: '/accessnovaa.png'
+  },
+  {
+    title: 'Techmore IT Solutions',
+    category: 'Frontend / IT Services',
+    description: 'A comprehensive IT and E-publishing platform specializing in PDF accessibility and WCAG compliance.',
+    tech: ['PHP', 'HTML5', 'CSS3', 'JavaScript'],
+    link: 'https://techmoreitsolutions.com/',
+    image: '/techmore.png'
   }
 ];
 
@@ -28,7 +37,7 @@ const backendProjects = [
     description: 'Point-of-sale system where I developed the Users module and secure Payment processing module.',
     tech: ['Node.js', 'Express', 'PostgreSQL'],
     link: 'https://cannooh.com/',
-    icon: '💳'
+    image: '/cannooh.png'
   },
   {
     title: 'Secure Transport',
@@ -36,7 +45,7 @@ const backendProjects = [
     description: 'Secure transport service platform where I architected and implemented the Vehicle management module.',
     tech: ['NestJS', 'PostgreSQL', 'Drizzle ORM'],
     link: 'https://www.securetranspo.com/',
-    icon: '🛡️'
+    image: '/securetranspo.png'
   }
 ];
 
@@ -73,7 +82,13 @@ const Projects = () => {
               whileHover={{ y: -10 }}
             >
               <div className={styles.imageBox}>
-                <span className={styles.emoji}>{project.icon}</span>
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className={styles.projectImage}
+                />
               </div>
               <div className={styles.content}>
                 <span className={styles.category}>{project.category}</span>
@@ -114,7 +129,13 @@ const Projects = () => {
               whileHover={{ y: -10 }}
             >
               <div className={styles.imageBox}>
-                <span className={styles.emoji}>{project.icon}</span>
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className={styles.projectImage}
+                />
               </div>
               <div className={styles.content}>
                 <span className={styles.category}>{project.category}</span>

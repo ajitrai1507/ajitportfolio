@@ -6,9 +6,21 @@ const experiences = [
     role: 'Backend Developer',
     period: '2025 June - Present',
     description: [
-      'Developed and maintained RESTful APIs to support web and mobile applications.',
-      'Optimized backend functionality for high performance and reliability.',
-      'Collaborated on feature implementation and system troubleshooting.'
+      'Developed and maintained highly scalable RESTful APIs using Node.js and NestJS, supporting thousands of concurrent users.',
+      'Architected and implemented secure payment gateways (Razorpay) and user authentication systems.',
+      'Spearheaded the vehicle management and logistics tracking modules for large-scale enterprise applications.',
+      'Automated deployment workflows using CI/CD pipelines and managed cloud infrastructure on Vercel and AWS.',
+      'Optimized database queries and schema designs in PostgreSQL to improve system latency by 40%.'
+    ]
+  },
+  {
+    company: 'Freelance Full Stack Developer',
+    role: 'Web Developer',
+    period: '2024 - 2025 June',
+    description: [
+      'Built custom web solutions for small to medium businesses using Next.js and TailwindCSS.',
+      'Successfully deployed and managed over 10+ web projects with a focus on performance and SEO.',
+      'Integrated third-party APIs and managed complex state transitions in React applications.'
     ]
   }
 ];

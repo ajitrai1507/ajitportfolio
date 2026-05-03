@@ -19,9 +19,29 @@ const Navbar = () => {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Link href="/">Ajit Rai</Link>
-        </div>
+        <motion.div 
+          className={styles.logo}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link href="/">
+            <motion.span
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              Ajit
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              style={{ color: 'var(--primary)', marginLeft: '8px' }}
+            >
+              Rai
+            </motion.span>
+          </Link>
+        </motion.div>
         
         {/* Desktop Menu */}
         <div className={styles.desktopMenu}>

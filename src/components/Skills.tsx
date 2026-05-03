@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
 
 const skillGroups = [
@@ -57,11 +59,29 @@ const Skills = () => {
         
         <div className={styles.tools}>
           <h3 className={styles.toolsTitle}>Other Tools & DevTools</h3>
-          <div className={styles.toolTags}>
-            {['Git', 'GitHub', 'RESTful APIs', 'Socket.io', 'Drizzle ORM', 'Sequelize', 'Redux Toolkit'].map((tool, i) => (
-              <span key={i} className={styles.toolTag}>{tool}</span>
+          <motion.div 
+            className={styles.toolTags}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+          >
+            {['Git', 'GitHub', 'Docker', 'Postman', 'RESTful APIs', 'Socket.io', 'Drizzle ORM', 'Sequelize', 'Redux Toolkit'].map((tool, i) => (
+              <motion.span 
+                key={i} 
+                className={styles.toolTag}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: { opacity: 1, scale: 1 }
+                }}
+                whileHover={{ scale: 1.1, backgroundColor: 'var(--primary)', color: '#fff' }}
+              >
+                {tool}
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

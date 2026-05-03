@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Portfolio of Ajit Rai, a Backend Developer experienced in Node.js, Express.js, NestJS, and PostgreSQL.",
 };
 
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

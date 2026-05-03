@@ -104,26 +104,32 @@
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
   }
   
   .timeline {
-    padding-left: 30px;
+    padding-left: 20px;
   }
   
   .dot {
-    left: -38px;
-    width: 14px;
-    height: 14px;
+    left: -28px;
+    width: 12px;
+    height: 12px;
+    top: 25px;
   }
   
   .meta {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
   }
   
   .role {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .period {
+    font-size: 0.75rem;
+    padding: 3px 10px;
   }
 }
